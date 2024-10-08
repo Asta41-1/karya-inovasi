@@ -1,0 +1,315 @@
+
+
+.body {
+    overflow-x: hidden;
+}
+
+
+/* Header */
+
+/* stats persebab */
+.Stats-bar {
+    background-color: #33333354;
+    width: 75%;
+    height: 50px;
+   
+    flex-wrap: wrap;
+}   
+
+.progress-bar {
+    display: flex;
+    width: 370px;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-left: 100%;
+
+    
+}
+
+.segment {
+    flex-grow: 1;
+    text-align: center;
+
+
+    font-weight: bold;
+    color: white;
+
+}
+
+.red {
+    background-color: red;
+    color: black;
+}
+
+.orange {
+    background-color: orange;
+    color: black;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+}
+
+.lime {
+    background-color: limegreen;
+    color: black;
+}
+
+.green {
+    background-color: green;
+    color: black;
+}
+
+/* stats persenan*/
+/* navbar */
+
+* {
+    font-family: poppins ;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #363636;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px;
+}
+
+/* Kontainer utama */
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+/* Input pencarian */
+.search-input {
+    border: none;
+    background-color: #3a3a3a; /* Warna background input */
+    color: white; /* Warna teks */
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 15px;
+    outline: none;
+    height: 30px;
+    width: 200px; /* Lebar input */
+}
+
+/* Tombol pencarian */
+.search-button {
+    background-color: #3a3a3a; /* Warna sama dengan kontainer */
+    border: none;
+    padding:  17px;
+    border-radius: 15px; /* Membuat tombol bulat */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+/* Ikon pencarian */
+.search-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(100%); /* Ubah warna ikon menjadi putih */
+}
+
+/* Header */
+
+
+.version {
+    font-size: 16px; /* Atur ukuran teks */
+    line-height: 1.5; /* Mengatur jarak antar baris */
+    color: black; /* Warna teks */
+    font-family: Arial, sans-serif; /* Gaya font */
+    text-align: left; /* Menjaga teks tetap rata kiri */
+    margin-left: 20px;
+    width: 100vh;
+}
+
+/* Header */
+
+/* map start */
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.map-container svg {
+    width: auto;
+    height: auto;
+}
+
+.description {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    display: none; /* Disembunyikan secara default */
+    z-index: 10;
+}
+
+
+
+/* Hover effect untuk wilayah desa */
+
+/* Hover effect untuk wilayah desa (transisi abu-abu ke hijau) */
+.desa {
+    fill: #363636; /* Warna awal (abu-abu) */
+    transition: fill 0.5s ease-in-out; /* Animasi transisi perubahan warna */
+}
+
+.desa:hover {
+    fill: #2ecc71; /* Ubah menjadi hijau saat hover */
+    cursor: pointer;
+}
+
+/* Hover effect untuk wilayah desa khusus (transisi abu-abu ke merah) */
+.desamerah {
+    fill: #363636; /* Warna awal (abu-abu) */
+    transition: fill 0.5s ease-in-out; /* Animasi transisi perubahan warna */
+}
+
+.desamerah:hover {
+    fill: red; /* Ubah menjadi merah saat hover */
+    cursor: pointer;
+}
+
+.desaorange {
+    fill: #363636; /* Warna awal (abu-abu) */
+    transition: fill 0.5s ease-in-out; /* Animasi transisi perubahan warna */
+}
+
+.desaorange:hover {
+    fill: rgb(255, 123, 0); /* Ubah menjadi oranye saat hover */
+    cursor: pointer;
+}
+
+.desayellow {
+    fill: #363636; /* Warna awal (abu-abu) */
+    transition: fill 0.5s ease-in-out; /* Animasi transisi perubahan warna */
+}
+
+.desayellow:hover {
+    fill: rgb(251, 255, 0); /* Ubah menjadi kuning saat hover */
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* tool hover */
+.toolhover {
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+    pointer-events: none; /* Prevent it from being interactive while invisible */
+}
+
+.toolhover.visible {
+    opacity: 1; /* Make visible on hover */
+    pointer-events: auto; /* Allow interaction */
+}
+
+#tooltip {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    color: #333;
+    z-index: 100;
+}
+
+  
+  #tooltip ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Membuat elemen dalam ul menjadi horizontal */
+    gap: 30px; /* Menambahkan jarak antar elemen */
+    
+}
+
+#tooltip li {
+    font-size: 14px;
+    margin: 10px; /* Hilangkan margin default */
+    padding: 10px; /* Tambahkan sedikit padding */
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#tooltip span {
+    font-weight: bold; /* Membuat simbol titik lebih tebal */
+}
+
+/* map end */
+
+/* History bar*/
+table, th, td {
+    border: 1px solid black;
+  }
+
+th {
+    background-color: #2ecc71;
+}
+
+#tabel {
+    position: fixed;
+    right: -100%; /* Awalnya tabel di luar layar */
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease-in-out; /* Animasi pergeseran */
+    z-index: 1000;
+}
+
+#tabel.visible {
+    right: 0; /* Geser tabel ke kiri sehingga terlihat */
+}
+
+#container-tombol {
+    position: fixed;
+    right: 20px; /* Selalu muncul di sisi kanan layar */
+    top: 50%; /* Berada di tengah layar secara vertikal */
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Default tidak terlihat */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Tabel end */
+
